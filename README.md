@@ -6,6 +6,10 @@ A fictional electronic music festival concept. Static HTML, CSS, JavaScript, and
 
 Run `node serve.cjs` from this folder, then open `http://127.0.0.1:4173`.
 
+## Deploy
+
+The repository includes a Vercel configuration for the static `dist/` output. Run `node scripts/verify-build.cjs` to verify the deployable files, then deploy from the repository root with `vercel --prod`.
+
 ## Files
 
 - `dist/index.html`: page structure, stage identities, FAQ, dialogs, and metadata.
