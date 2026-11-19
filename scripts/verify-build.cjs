@@ -5,7 +5,8 @@ const requiredFiles = [
   'index.html',
   'style.css',
   'app.js',
-  'sculpture.js',
+  'water.js',
+  'motion.js',
   'icon.svg',
   'social.svg',
 ];

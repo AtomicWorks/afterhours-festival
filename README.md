@@ -1,10 +1,10 @@
 # AFTERHOURS
 
-A fictional electronic music festival concept. Static HTML, CSS, JavaScript, and a custom procedural WebGL sculpture. No frontend build or package installation is required.
+A fictional electronic music festival concept. Static HTML, CSS, JavaScript, and a custom procedural WebGL water surface. No frontend build or package installation is required.
 
 ## Preview
 
-Run `node serve.cjs` from this folder, then open `http://127.0.0.1:4173`.
+Run `node serve.cjs` from this folder (optionally `node serve.cjs <port>`), then open `http://127.0.0.1:4173`.
 
 ## Deploy
 
@@ -15,12 +15,13 @@ The repository includes a Vercel configuration for the static `dist/` output. Ru
 - `dist/index.html`: page structure, stage identities, FAQ, dialogs, and metadata.
 - `dist/style.css`: responsive layout, typography, motion, and accessibility styles. Barlow Condensed and DM Sans are loaded from Google Fonts with local fallbacks.
 - `dist/app.js`: fictional artists, timestamp-based scheduling, day filters, My Night, browser-local persistence, dialogs, and audio controls.
-- `dist/sculpture.js`: generated torus-knot mesh and WebGL shading. No external 3D assets or libraries. A CSS sculpture remains available when WebGL cannot initialize.
+- `dist/water.js`: the hero background — a full-bleed WebGL water surface (procedural swell plus expanding ripple rings), shaded dark with acid-green glints. Moving the cursor across the hero leaves a ripple wake, clicking splashes, and the light glint follows the pointer; the text layered above never moves. Occasional drops keep it alive, and a playing track adds drops on the beat. No external assets or libraries; without WebGL the static hero gradient remains.
+- `dist/motion.js`: the motion layer — first-visit loader, hero wordmark entrance, sticky/auto-hiding nav with scroll progress, masked heading reveals, scroll-scrubbed manifesto, velocity-reactive crossed marquee tapes, lineup hover previews with generated artist art, custom cursor, magnetic controls, stage tilt, add-to-night spark, and a live doors countdown. Everything decorative stops under reduced motion or the footer motion toggle; pointer effects only run on fine pointers.
 - `.openai/hosting.json`: the registered Sites project and static output directory.
 
 ## Audio handoff
 
-The user will supply a licensed track. No production soundtrack is bundled yet. Sound starts off. The current sound panel can load a local audio file for private preview; files are never uploaded or persisted. Playback begins only after pressing Play sound. Web Audio drives the sculpture from that track. The temporary QA tone lives outside the deployment folder and is not shipped.
+The user will supply a licensed track. No production soundtrack is bundled yet. Sound starts off. The current sound panel can load a local audio file for private preview; files are never uploaded or persisted. Playback begins only after pressing Play sound. Web Audio drives the hero water from that track. The temporary QA tone lives outside the deployment folder and is not shipped.
 
 When the track arrives, add the licensed asset to `dist/assets/`, connect it as the festival soundtrack, and retain explicit opt-in playback and a pause control. Do not autoplay.
 
